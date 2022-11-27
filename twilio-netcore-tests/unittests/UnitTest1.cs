@@ -38,7 +38,7 @@ namespace unittests
 
             var twilioClient = new TwilioClientService(accountId, accessToken);
 
-            var messageId = twilioClient.SendMessage(messageRequest);
+            var messageId = twilioClient.SendMessage(messageRequest).Result;
 
             Assert.IsNotNull(messageId);
 
