@@ -24,7 +24,7 @@ namespace logic
         /// </summary>
         /// <param name="messageRequest">Message request</param>
         /// <returns>Message Id as String</returns>
-        public async Task<string> SendMessage(WhatsappMessageRequest messageRequest) 
+        public async Task<string> SendMessage(MessageRequest messageRequest) 
         {
             //Taken from the example in: https://www.twilio.com/docs/libraries/csharp-dotnet/details
             var message = await MessageResource.CreateAsync(
@@ -41,7 +41,7 @@ namespace logic
         /// </summary>
         /// <param name="messageRequest">Message request</param>
         /// <returns>Message Id as String</returns>
-        public async Task<string> SendMessageSMS(WhatsappMessageRequest messageRequest)
+        public async Task<string> SendMessageSMS(MessageRequest messageRequest)
         {
             //Taken from the example in: https://www.twilio.com/docs/libraries/csharp-dotnet/details
             var message = await MessageResource.CreateAsync(
