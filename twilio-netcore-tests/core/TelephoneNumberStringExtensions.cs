@@ -9,7 +9,7 @@ namespace core
 {
     public static class TelephoneNumberStringExtensions
     {
-        static string pattern = "^[+][0-9]{12}$";
+        static string pattern = "^\\+[0-9]{11,12}$";
         /// <summary>
         /// Verifies if number is correct, example: +14155238886
         /// </summary>
