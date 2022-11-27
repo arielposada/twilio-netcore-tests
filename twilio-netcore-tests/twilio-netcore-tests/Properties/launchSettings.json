@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "twilio_netcore_tests": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
