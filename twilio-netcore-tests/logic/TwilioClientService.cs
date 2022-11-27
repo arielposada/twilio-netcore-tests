@@ -29,8 +29,8 @@ namespace logic
             //Taken from the example in: https://www.twilio.com/docs/libraries/csharp-dotnet/details
             var message = await MessageResource.CreateAsync(
                 body: messageRequest.body,
-                from: new Twilio.Types.PhoneNumber(messageRequest.from),
-                to: new Twilio.Types.PhoneNumber(messageRequest.to)
+                from: new Twilio.Types.PhoneNumber("whatsapp:"+messageRequest.from),
+                to: new Twilio.Types.PhoneNumber("whatsapp:"+messageRequest.to)
             );
 
             return message.Sid;
