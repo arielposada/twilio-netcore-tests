@@ -1,2 +1,2 @@
 # twilio-netcore-tests
-Tests with Net Core of Twilio
+Tests of Twilio with Net Core 3.1 and Net 6
