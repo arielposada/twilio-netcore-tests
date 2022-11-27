@@ -36,6 +36,23 @@ namespace logic
             return message.Sid;
         }
 
+        /// <summary>
+        /// Send a message with Twilio
+        /// </summary>
+        /// <param name="messageRequest">Message request</param>
+        /// <returns>Message Id as String</returns>
+        public async Task<string> SendMessageSMS(WhatsappMessageRequest messageRequest)
+        {
+            //Taken from the example in: https://www.twilio.com/docs/libraries/csharp-dotnet/details
+            var message = await MessageResource.CreateAsync(
+                body: messageRequest.body,
+                from: new Twilio.Types.PhoneNumber(messageRequest.from),
+                to: new Twilio.Types.PhoneNumber(messageRequest.to)
+            );
+
+            return message.Sid;
+        }
+
         public void Dispose() { }
     }
 }

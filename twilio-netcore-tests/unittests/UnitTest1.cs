@@ -34,7 +34,7 @@ namespace unittests
             var body = _configuration.GetSection("WhatsappTest:body").Value;
 
 
-            var messageRequest = new WhatsappMessageRequest(body, from, to);
+            var messageRequest = new MessageRequest(body, from, to);
 
             var twilioClient = new TwilioClientService(accountId, accessToken);
 
