@@ -2,6 +2,10 @@
 
 namespace core
 {
+    /// <summary>
+    /// Model for the whatsapp message to be sent.
+    /// Based on the example of https://www.twilio.com/docs/whatsapp/quickstart/csharp
+    /// </summary>
     public class WhatsappMessageRequest
     {
         public string body { get; set; }
